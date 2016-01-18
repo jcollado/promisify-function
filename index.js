@@ -8,7 +8,9 @@ function promisify (fn) {
         if (err) {
           reject(err)
         } else {
-          const data = Array.prototype.slice.call(arguments, 1)
+          const data = arguments.length === 2
+            ? arguments[1]
+            : Array.prototype.slice.call(arguments, 1)
           resolve(data)
         }
       }
