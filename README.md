@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/promisify-function.svg)](https://www.npmjs.com/package/promisify-function)
 [![Build Status](https://travis-ci.org/jcollado/promisify-function.svg?branch=master)](https://travis-ci.org/jcollado/promisify-function)
+[![Coverage Status](https://coveralls.io/repos/jcollado/promisify-function/badge.svg?branch=master&service=github)](https://coveralls.io/github/jcollado/promisify-function?branch=master)
 [![Dependency Status](https://david-dm.org/jcollado/promisify-function.svg)](https://david-dm.org/jcollado/promisify-function)
 [![devDependency Status](https://david-dm.org/jcollado/promisify-function/dev-status.svg)](https://david-dm.org/jcollado/promisify-function#info=devDependencies)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
