@@ -25,18 +25,17 @@
   "devDependencies": {
     "chai": "3.4.1",
     "chai-as-promised": "5.2.0",
+    "coveralls": "2.11.6",
     "cz-conventional-changelog": "^1.1.5",
     "istanbul": "0.4.2",
     "mocha": "2.3.4",
     "semantic-release": "^4.3.5",
-    "sinon": "1.17.2"
+    "sinon": "1.17.2",
+    "sinon-chai": "2.8.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "sinon-chai": "2.8.0"
   }
 }
