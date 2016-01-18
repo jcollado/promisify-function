@@ -16,7 +16,7 @@ Turn a callback style function into a function that returns a promise.
 The recommended way to install `promisify-function` is as a dependency of a project:
 
 ```bash
-npm install --save multitest
+npm install --save promisify-function
 ```
 
 ## Usage
