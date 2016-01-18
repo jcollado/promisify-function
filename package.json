@@ -1,0 +1,32 @@
+{
+  "name": "promisify-function",
+  "description": "Turn a callback-style function into a function that returns a promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcollado/promisify-function.git"
+  },
+  "keywords": [
+    "promisify",
+    "function"
+  ],
+  "author": "Javier Collado <javier.collado@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcollado/promisify-function/issues"
+  },
+  "homepage": "https://github.com/jcollado/promisify-function#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
