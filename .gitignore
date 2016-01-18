@@ -6,3 +6,6 @@ coverage
 
 # vim swap files
 *.swp
+
+# Multiple version test case execution
+.multitest
