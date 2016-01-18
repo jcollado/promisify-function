@@ -34,6 +34,20 @@ describe('promisify', function () {
     const fn = sinon.stub().yields(null, 'a', 'result')
     const promisified = promisify(fn)
     return expect(promisified('some', 'arguments'))
+      .to.eventually.be.fulfilled
+  })
+
+  it('resolves single value as such', function () {
+    const fn = sinon.stub().yields(null, 42)
+    const promisified = promisify(fn)
+    return expect(promisified('some', 'arguments'))
+      .to.eventually.deep.equal(42)
+  })
+
+  it('resolves multiple value as an array', function () {
+    const fn = sinon.stub().yields(null, 'a', 'result')
+    const promisified = promisify(fn)
+    return expect(promisified('some', 'arguments'))
       .to.eventually.deep.equal(['a', 'result'])
   })
 })
