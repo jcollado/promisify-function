@@ -48,7 +48,7 @@
     "ghooks": {
       "commit-msg": "validate-commit-msg",
       "pre-commit": "npm test",
-      "pre-push": "npm multitest"
+      "pre-push": "npm run multitest"
     }
   }
 }
