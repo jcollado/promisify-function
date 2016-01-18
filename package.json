@@ -5,6 +5,7 @@
   "scripts": {
     "cover": "istanbul cover _mocha -- test.js",
     "coveralls": "istanbul cover --report lcovonly _mocha -- test.js && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "lint": "standard",
     "test": "mocha test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -31,7 +32,8 @@
     "mocha": "2.3.4",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.2",
-    "sinon-chai": "2.8.0"
+    "sinon-chai": "2.8.0",
+    "standard": "5.4.1"
   },
   "config": {
     "commitizen": {
