@@ -1,0 +1,33 @@
+# promisify-function
+
+[![npm](https://img.shields.io/npm/v/promisify-function.svg)](https://www.npmjs.com/package/promisify-function)
+[![Build Status](https://travis-ci.org/jcollado/promisify-function.svg?branch=master)](https://travis-ci.org/jcollado/promisify-function)
+[![Dependency Status](https://david-dm.org/jcollado/promisify-function.svg)](https://david-dm.org/jcollado/promisify-function)
+[![devDependency Status](https://david-dm.org/jcollado/promisify-function/dev-status.svg)](https://david-dm.org/jcollado/promisify-function#info=devDependencies)
+
+Turn a callback style function into a function that returns a promise.
+
+## Installation
+
+The recommended way to install `promisify-function` is as a dependency of a project:
+
+```bash
+npm install --save multitest
+```
+
+## Usage
+
+Pass a callback style function and get a function the returns a promise as result:
+
+```node
+const fs = require('fs')
+const promisify = require('promisify-function')
+const mkdir = promisify(fs.mkdir)
+```
+
+## Contributing
+
+Any contribution is more than welcome. In particular, if:
+
+- there's something that doesn't work as expected or you have an idea for a nice to have feature, then please submit an issue [here](https://github.com/jcollado/promisify-function/issues/new)
+- you know how to fix a problem or improve the code, then please submit a pull request [here](https://github.com/jcollado/promisify-function/compare)
