@@ -50,4 +50,8 @@ describe('promisify', function () {
     return expect(promisified('some', 'arguments'))
       .to.eventually.deep.equal(['a', 'result'])
   })
+
+  it('throws when no function is passed', function () {
+    expect(promisify).to.throw(Error, 'fn parameter must be a function')
+  })
 })
