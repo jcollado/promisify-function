@@ -1,6 +1,9 @@
 'use strict'
 
 function promisify (fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('fn parameter must be a function')
+  }
   return function () {
     const args = Array.prototype.slice.call(arguments)
     return new Promise(function (resolve, reject) {
