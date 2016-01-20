@@ -10,7 +10,7 @@
     "multitest": "multitest",
     "pretest": "npm run lint",
     "test": "mocha test.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post && pr-tagger --log-level debug --access-token ${GH_TOKEN}"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post && git fetch --tags && pr-tagger --log-level debug --access-token ${GH_TOKEN}"
   },
   "repository": {
     "type": "git",
