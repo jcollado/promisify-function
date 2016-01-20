@@ -21,7 +21,7 @@ npm install --save promisify-function
 
 ## Usage
 
-Pass a callback style function and get a function the returns a promise as result:
+Pass a callback style function and get a function the returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) as result:
 
 ```node
 const fs = require('fs')
