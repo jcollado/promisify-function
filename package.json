@@ -35,7 +35,7 @@
     "istanbul": "0.4.2",
     "mocha": "2.3.4",
     "multitest": "0.2.0",
-    "pr-tagger": "0.6.1",
+    "pr-tagger": "0.7.0",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.2",
     "sinon-chai": "2.8.0",
