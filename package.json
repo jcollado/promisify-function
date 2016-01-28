@@ -34,7 +34,7 @@
     "ghooks": "1.0.3",
     "istanbul": "0.4.2",
     "mocha": "2.4.4",
-    "multitest": "0.2.0",
+    "multitest": "0.3.2",
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.3",
