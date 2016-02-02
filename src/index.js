@@ -1,5 +1,3 @@
-'use strict'
-
 function promisify (fn) {
   if (typeof fn !== 'function') {
     throw new Error('fn parameter must be a function')
