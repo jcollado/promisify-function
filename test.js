@@ -1,55 +1,47 @@
-/* global describe it */
-import chai from 'chai'
-import chaiAsPromised from 'chai-as-promised'
+import 'babel-register'
+
 import sinon from 'sinon'
-import sinonChai from 'sinon-chai'
+import test from 'ava'
 
 import promisify from './src'
 
-chai.use(chaiAsPromised)
-chai.use(sinonChai)
-
-const expect = chai.expect
-
-describe('promisify', () => {
-  it('calls wrapped function with arguments', function () {
-    const fn = sinon.stub().yields()
-    const promisified = promisify(fn)
-    return expect(promisified('some', 'arguments'))
-      .to.be.eventually.fulfilled.then(function () {
-        expect(fn).to.have.been.calledWith('some', 'arguments')
-      })
+test('promisify calls wrapped function with arguments', t => {
+  const fn = sinon.stub().yields()
+  const promisified = promisify(fn)
+  return promisified('some', 'arguments').then(() => {
+    t.true(fn.calledWith('some', 'arguments'))
   })
+})
 
-  it('rejects when wrapped function returns error', () => {
-    const fn = sinon.stub().yields('some error')
-    const promisified = promisify(fn)
-    return expect(promisified('some', 'arguments'))
-      .to.be.eventually.rejectedWith('some error')
-  })
+test('promisify rejects when wrapped function returns error', t => {
+  const expected = 'some error'
+  const fn = sinon.stub().yields(expected)
+  const promisified = promisify(fn)
+  return t.throws(promisified('some', 'arguments'), expected)
+})
 
-  it('resolves when wrapped function returns no error', () => {
-    const fn = sinon.stub().yields(null, 'a', 'result')
-    const promisified = promisify(fn)
-    return expect(promisified('some', 'arguments'))
-      .to.eventually.be.fulfilled
-  })
+test('promisify resolves when wrapped function returns no error', t => {
+  const fn = sinon.stub().yields(null, 'a', 'result')
+  const promisified = promisify(fn)
+  return t.doesNotThrow(promisified('some', 'arguments'))
+})
 
-  it('resolves single value as such', () => {
-    const fn = sinon.stub().yields(null, 42)
-    const promisified = promisify(fn)
-    return expect(promisified('some', 'arguments'))
-      .to.eventually.deep.equal(42)
+test('promisify resolves single value as such', t => {
+  const fn = sinon.stub().yields(null, 42)
+  const promisified = promisify(fn)
+  return promisified('some', 'arguments').then(result => {
+    t.is(result, 42)
   })
+})
 
-  it('resolves multiple value as an array', () => {
-    const fn = sinon.stub().yields(null, 'a', 'result')
-    const promisified = promisify(fn)
-    return expect(promisified('some', 'arguments'))
-      .to.eventually.deep.equal(['a', 'result'])
+test('promisify resolves multiple value as an array', t => {
+  const fn = sinon.stub().yields(null, 'a', 'result')
+  const promisified = promisify(fn)
+  return promisified('some', 'arguments').then(result => {
+    t.same(result, ['a', 'result'])
   })
+})
 
-  it('throws when no function is passed', () => {
-    expect(promisify).to.throw(Error, 'fn parameter must be a function')
-  })
+test('promisify throws when no function is passed', t => {
+  t.throws(promisify, 'fn parameter must be a function')
 })

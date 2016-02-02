@@ -14,7 +14,7 @@
     "report:html": "nyc report --reporter=html",
     "report:text": "nyc report --reporter=text-lcov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post && git fetch --tags && pr-tagger --log-level debug --access-token ${GH_TOKEN}",
-    "test": "mocha --compilers js:babel-register test.js"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -31,21 +31,18 @@
   },
   "homepage": "https://github.com/jcollado/promisify-function#readme",
   "devDependencies": {
+    "ava": "0.11.0",
     "babel-cli": "6.4.5",
     "babel-preset-es2015-node4": "2.0.3",
     "babel-register": "6.4.3",
-    "chai": "3.5.0",
-    "chai-as-promised": "5.2.0",
     "coveralls": "2.11.6",
     "cz-conventional-changelog": "^1.1.5",
     "ghooks": "1.0.3",
-    "mocha": "2.4.5",
     "multitest": "0.3.2",
     "nyc": "5.5.0",
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.3",
-    "sinon-chai": "2.8.0",
     "standard": "5.4.1",
     "validate-commit-msg": "1.2.0"
   },
