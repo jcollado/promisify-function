@@ -4,20 +4,19 @@ function promisify (fn) {
   if (typeof fn !== 'function') {
     throw new Error('fn parameter must be a function')
   }
-  return function () {
-    const args = Array.prototype.slice.call(arguments)
+  return function (...args) {
     return new Promise(function (resolve, reject) {
-      function callback (err) {
+      function callback (err, ...args) {
         if (err) {
           reject(err)
         } else {
-          const data = arguments.length === 2
-            ? arguments[1]
-            : Array.prototype.slice.call(arguments, 1)
+          const data = args.length <= 1
+            ? args[0]
+            : args
           resolve(data)
         }
       }
-      fn.apply(null, args.concat(callback))
+      fn(...[...args, callback])
     })
   }
 }
