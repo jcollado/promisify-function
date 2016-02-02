@@ -11,7 +11,7 @@ chai.use(sinonChai)
 
 const expect = chai.expect
 
-const promisify = require('.')
+const promisify = require('./src')
 
 describe('promisify', function () {
   it('calls wrapped function with arguments', function () {

@@ -11,4 +11,4 @@ coverage
 .multitest
 
 # babel output
-build
+dist
