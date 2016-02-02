@@ -14,7 +14,7 @@
     "report:html": "nyc report --reporter=html",
     "report:text": "nyc report --reporter=text-lcov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post && git fetch --tags && pr-tagger --log-level debug --access-token ${GH_TOKEN}",
-    "test": "mocha --compilers js:babel-register test.js"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
