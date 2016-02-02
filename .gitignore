@@ -9,3 +9,6 @@ coverage
 
 # Multiple version test case execution
 .multitest
+
+# babel output
+build

@@ -3,6 +3,7 @@
   "description": "Turn a callback-style function into a function that returns a promise",
   "main": "index.js",
   "scripts": {
+    "build": "babel -d build index.js",
     "cover": "istanbul cover _mocha -- test.js",
     "coveralls": "istanbul cover --report lcovonly _mocha -- test.js && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "standard",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://github.com/jcollado/promisify-function#readme",
   "devDependencies": {
+    "babel-cli": "6.4.5",
+    "babel-preset-es2015-node5": "1.1.2",
     "chai": "3.5.0",
     "chai-as-promised": "5.2.0",
     "coveralls": "2.11.6",
@@ -51,5 +54,10 @@
       "pre-commit": "npm test",
       "pre-push": "npm run multitest"
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015-node5"
+    ]
   }
 }
