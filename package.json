@@ -9,6 +9,7 @@
     "lint": "standard",
     "premultitest": "npm run lint",
     "multitest": "multitest",
+    "prepublish": "npm run build",
     "pretest": "npm run lint",
     "test": "mocha --compilers js:babel-register test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post && git fetch --tags && pr-tagger --log-level debug --access-token ${GH_TOKEN}"
