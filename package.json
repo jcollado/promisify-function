@@ -3,7 +3,7 @@
   "description": "Turn a callback-style function into a function that returns a promise",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel -d dist src/index.js",
+    "build": "babel -d dist src",
     "cover": "istanbul cover _mocha -- test.js",
     "coveralls": "istanbul cover --report lcovonly _mocha -- test.js && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "standard",
