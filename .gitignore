@@ -3,6 +3,7 @@ node_modules
 
 # test coverage report files
 coverage
+.nyc_output
 
 # vim swap files
 *.swp
