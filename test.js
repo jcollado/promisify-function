@@ -4,12 +4,12 @@ import chaiAsPromised from 'chai-as-promised'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 
+import promisify from './src'
+
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
 
 const expect = chai.expect
-
-const promisify = require('./src')
 
 describe('promisify', () => {
   it('calls wrapped function with arguments', function () {

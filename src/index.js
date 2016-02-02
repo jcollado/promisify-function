@@ -1,4 +1,4 @@
-function promisify (fn) {
+export default function promisify (fn) {
   if (typeof fn !== 'function') {
     throw new Error('fn parameter must be a function')
   }
@@ -18,5 +18,3 @@ function promisify (fn) {
     })
   }
 }
-
-module.exports = promisify
