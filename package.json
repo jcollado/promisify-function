@@ -30,7 +30,7 @@
   "homepage": "https://github.com/jcollado/promisify-function#readme",
   "devDependencies": {
     "babel-cli": "6.4.5",
-    "babel-preset-es2015-node5": "1.1.2",
+    "babel-preset-es2015-node4": "2.0.3",
     "babel-register": "6.4.3",
     "chai": "3.5.0",
     "chai-as-promised": "5.2.0",
@@ -59,7 +59,7 @@
   },
   "babel": {
     "presets": [
-      "es2015-node5"
+      "es2015-node4"
     ]
   }
 }
