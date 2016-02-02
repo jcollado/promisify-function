@@ -35,8 +35,6 @@
     "babel-cli": "6.4.5",
     "babel-preset-es2015-node4": "2.0.3",
     "babel-register": "6.4.3",
-    "chai": "3.5.0",
-    "chai-as-promised": "5.2.0",
     "coveralls": "2.11.6",
     "cz-conventional-changelog": "^1.1.5",
     "ghooks": "1.0.3",
@@ -45,7 +43,6 @@
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.3",
-    "sinon-chai": "2.8.0",
     "standard": "5.4.1",
     "validate-commit-msg": "1.2.0"
   },
