@@ -1,5 +1,3 @@
-import 'babel-register'
-
 import sinon from 'sinon'
 import test from 'ava'
 

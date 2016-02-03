@@ -56,6 +56,11 @@
       "pre-push": "npm run multitest"
     }
   },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
   "babel": {
     "presets": [
       "es2015-node4"
