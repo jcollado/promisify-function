@@ -1,2 +1,3 @@
 # test coverage report files
 coverage
+.nyc_output
