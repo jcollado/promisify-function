@@ -38,7 +38,7 @@
     "coveralls": "2.11.6",
     "cz-conventional-changelog": "^1.1.5",
     "ghooks": "1.0.3",
-    "multitest": "0.3.2",
+    "multitest": "0.4.1",
     "nyc": "5.5.0",
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
