@@ -3,7 +3,7 @@ export default function promisify (fn) {
     throw new Error('fn parameter must be a function')
   }
   return function (...args) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
       function callback (err, ...args) {
         if (err) {
           reject(err)
