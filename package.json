@@ -33,6 +33,7 @@
   "devDependencies": {
     "ava": "0.11.0",
     "babel-cli": "6.5.1",
+    "babel-eslint": "4.1.8",
     "babel-preset-es2015-node4": "2.0.3",
     "babel-register": "6.5.1",
     "coveralls": "2.11.6",
@@ -65,5 +66,8 @@
     "presets": [
       "es2015-node4"
     ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
