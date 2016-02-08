@@ -3,12 +3,11 @@ import test from 'ava'
 
 import promisify from './src'
 
-test('promisify calls wrapped function with arguments', (t) => {
+test('promisify calls wrapped function with arguments', async function (t) {
   const fn = sinon.stub().yields()
   const promisified = promisify(fn)
-  return promisified('some', 'arguments').then(() => {
-    t.true(fn.calledWith('some', 'arguments'))
-  })
+  await promisified('some', 'arguments')
+  t.true(fn.calledWith('some', 'arguments'))
 })
 
 test('promisify rejects when wrapped function returns error', (t) => {
@@ -24,20 +23,18 @@ test('promisify resolves when wrapped function returns no error', (t) => {
   return t.doesNotThrow(promisified('some', 'arguments'))
 })
 
-test('promisify resolves single value as such', (t) => {
+test('promisify resolves single value as such', async function (t) {
   const fn = sinon.stub().yields(null, 42)
   const promisified = promisify(fn)
-  return promisified('some', 'arguments').then((result) => {
-    t.is(result, 42)
-  })
+  const result = await promisified('some', 'arguments')
+  t.is(result, 42)
 })
 
-test('promisify resolves multiple value as an array', (t) => {
+test('promisify resolves multiple value as an array', async function (t) {
   const fn = sinon.stub().yields(null, 'a', 'result')
   const promisified = promisify(fn)
-  return promisified('some', 'arguments').then((result) => {
-    t.same(result, ['a', 'result'])
-  })
+  const result = await promisified('some', 'arguments')
+  t.same(result, ['a', 'result'])
 })
 
 test('promisify throws when no function is passed', (t) => {
