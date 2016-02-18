@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/jcollado/promisify-function#readme",
   "devDependencies": {
-    "ava": "0.11.0",
+    "ava": "0.12.0",
     "babel-cli": "6.5.1",
     "babel-eslint": "5.0.0",
     "babel-preset-es2015-node4": "2.0.3",
