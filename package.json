@@ -36,7 +36,7 @@
     "babel-eslint": "5.0.0",
     "babel-preset-es2015-node4": "2.0.3",
     "babel-register": "6.5.2",
-    "coveralls": "2.11.6",
+    "coveralls": "2.11.7",
     "cz-conventional-changelog": "^1.1.5",
     "ghooks": "1.0.3",
     "multitest": "0.4.1",
