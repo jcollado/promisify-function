@@ -1,6 +1,7 @@
 # promisify-function
 
 [![npm](https://img.shields.io/npm/v/promisify-function.svg)](https://www.npmjs.com/package/promisify-function)
+[![Documentation](https://img.shields.io/badge/Documentation-ready-green.svg)](https://doclets.io/jcollado/promisify-function/master)
 [![Build Status](https://travis-ci.org/jcollado/promisify-function.svg?branch=master)](https://travis-ci.org/jcollado/promisify-function)
 [![Coverage Status](https://coveralls.io/repos/jcollado/promisify-function/badge.svg?branch=master&service=github)](https://coveralls.io/github/jcollado/promisify-function?branch=master)
 [![Dependency Status](https://david-dm.org/jcollado/promisify-function.svg)](https://david-dm.org/jcollado/promisify-function)
