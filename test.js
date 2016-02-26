@@ -20,7 +20,7 @@ test('promisify rejects when wrapped function returns error', (t) => {
 test('promisify resolves when wrapped function returns no error', (t) => {
   const fn = sinon.stub().yields(null, 'a', 'result')
   const promisified = promisify(fn)
-  return t.doesNotThrow(promisified('some', 'arguments'))
+  return t.notThrows(promisified('some', 'arguments'))
 })
 
 test('promisify resolves single value as such', async function (t) {
