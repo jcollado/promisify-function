@@ -1,3 +1,10 @@
+/** @module promisify-function */
+
+/**
+ * Promisify a function
+ * @param {function} fn - A function that uses node convention for callbacks
+ * @return {function} A function that wraps the original function and returns a promise
+ */
 export default function promisify (fn) {
   if (typeof fn !== 'function') {
     throw new Error('fn parameter must be a function')
