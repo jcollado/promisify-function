@@ -12,7 +12,7 @@ test('promisify calls wrapped function with arguments', async function (t) {
 
 test('promisify rejects when wrapped function returns error', (t) => {
   const expected = 'some error'
-  const fn = sinon.stub().yields(expected)
+  const fn = sinon.stub().yields(new Error(expected))
   const promisified = promisify(fn)
   return t.throws(promisified('some', 'arguments'), expected)
 })
