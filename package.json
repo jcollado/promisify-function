@@ -40,7 +40,7 @@
     "cz-conventional-changelog": "^1.1.5",
     "ghooks": "1.0.3",
     "multitest": "0.4.1",
-    "nyc": "6.0.0",
+    "nyc": "6.1.1",
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
     "sinon": "1.17.3",
