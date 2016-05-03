@@ -43,7 +43,7 @@
     "nyc": "6.4.2",
     "pr-tagger": "0.7.1",
     "semantic-release": "^4.3.5",
-    "sinon": "1.17.3",
+    "sinon": "1.17.4",
     "standard": "7.0.0",
     "validate-commit-msg": "2.6.1"
   },
