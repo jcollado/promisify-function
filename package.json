@@ -38,7 +38,7 @@
     "babel-register": "6.9.0",
     "coveralls": "2.11.9",
     "cz-conventional-changelog": "^1.1.5",
-    "ghooks": "1.2.2",
+    "ghooks": "1.2.3",
     "multitest": "0.4.1",
     "nyc": "6.4.4",
     "pr-tagger": "0.7.1",
